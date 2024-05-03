@@ -102,6 +102,27 @@ div {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
-
 }
 
+.projects h2{
+ grid-column: 1/-1;
+ justify-self: left;
+ font-size: x-larger;
+}
+
+.projects .project-card {
+    padding: 16px;
+    border-radius: 12px;
+    border-left:8px solid #F0B429 ;
+    box-shadow:1px 4px 2px #e0e0e0;
+}
+
+.projects .project-card h1{
+    font-size: larger;
+}
+
+.projects .project-card .bottom {
+    display: flex;
+    justify-content: right;
+
+}
