@@ -1,3 +1,8 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 div {
     outline: 2px solid black;
     margin: 5px;
@@ -18,15 +23,71 @@ div {
 
 .header {
     grid-column: 2 / -1;
+    box-shadow:1px 4px 2px #e0e0e0;
 }
 
 .header .search-bar {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr 1fr 2fr;
+    grid-template-columns: 1fr 4fr 2fr;
+    align-items: center;
+    gap: 4px;
+
 }
+
+.header img {
+    width: 32px;
+    height: 32px;
+    justify-self: right;
+}
+
+.header input {
+    padding: 8px;
+    border-radius: 16px;
+    border-style:none;
+    background-color: #E2E8F0;
+}
+
+.header .search-bar .right {
+    display: flex;
+    /* grid-template-columns: repeat(3, 1fr); */
+    justify-content: center;
+    gap:8px;
+    align-items: center;
+}
+
 .header .user-bar{
     display: grid;
-    grid-template-columns: 1fr 4fr 2fr 2fr 2fr ;
+    grid-template-columns: 1fr 4fr 2fr ;
+    align-items: center;
+}
+
+.user-bar .dp {
+    justify-self: right;
+}
+
+.user-bar .dp img {
+    width: 64px;
+    height: 64px;
+}
+
+.user-bar .user-name{
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.user-bar .btn-group {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.user-bar .btn-group button{
+    width: 80px;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 16px;
+    border-style: none;
+    background-color: #1992D4;
+    color: white;
 }
 
 .container {
