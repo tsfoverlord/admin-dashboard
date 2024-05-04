@@ -107,7 +107,7 @@ div {
 .projects h2{
  grid-column: 1/-1;
  justify-self: left;
- font-size: x-larger;
+ font-size: x-large;
 }
 
 .projects .project-card {
@@ -124,5 +124,25 @@ div {
 .projects .project-card .bottom {
     display: flex;
     justify-content: right;
+}
 
+.right-side {
+    width: 90%;
+    justify-self: center;
+}
+
+.announcements h1,.trending h1 {
+    font-size: x-large;
+}
+
+.announcement-card {
+    border-radius: 8px;
+    box-shadow:2px 2px 2px #6b6b6b;
+    padding: 16px;
+}
+
+.right-side .announcements .announcement {
+    margin: 16px;
+    box-shadow:0px 1px 0px #ababab;
+    padding-bottom: 16px;
 }
