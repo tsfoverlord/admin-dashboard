@@ -10,8 +10,37 @@
 
 .sidebar {
     grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background-color: #1992D4;
+
 }
 
+.sidebar h1 {
+  margin-left: 32px;
+  margin-top: 16px;
+  color: white;
+}
+
+.sidebar ul {
+    margin-left: 32px;
+    margin-top: 16px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+} 
+
+.sidebar ul li {
+    font-size: large;
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
 
 .header {
     grid-column: 2 / -1;
@@ -38,6 +67,7 @@
     border-radius: 16px;
     border-style:none;
     background-color: #E2E8F0;
+    margin: 8px 0px;
 }
 
 .header .search-bar .right {
@@ -117,7 +147,7 @@
     border-left:8px solid #F0B429 ;
     box-shadow:1px 4px 2px #e0e0e0;
     background-color: white;
-
+    position: relative;
 }
 
 .projects .project-card h1{
@@ -125,8 +155,9 @@
 }
 
 .projects .project-card .bottom {
-    display: flex;
-    justify-content: right;
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
 }
 
 .right-side {
@@ -140,7 +171,7 @@
     display: grid;
 }
 
-.left h1, .announcements h1,.trending h1 {
+.left > h1, .announcements h1,.trending h1 {
     font-size: x-large;
     padding: 8px;
 
