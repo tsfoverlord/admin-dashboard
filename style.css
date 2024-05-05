@@ -3,11 +3,6 @@
     padding: 0px;
 }
 
-div {
-    outline: 2px solid black;
-    margin: 5px;
-}
-
 .main-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -17,13 +12,11 @@ div {
     grid-row: 1 / span 2;
 }
 
-/* .header *{
-    outline: 2px solid black;
-} */
 
 .header {
     grid-column: 2 / -1;
     box-shadow:1px 4px 2px #e0e0e0;
+    padding: 16px;
 }
 
 .header .search-bar {
@@ -49,7 +42,7 @@ div {
 
 .header .search-bar .right {
     display: flex;
-    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap:8px;
     align-items: center;
@@ -95,13 +88,21 @@ div {
     grid-row-start: 2;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    background-color: #E2E8F0;
+    padding: 16px;
 
 }
 
-.container .projects {
+.container .left {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .left .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
     gap: 10px;
+    flex-grow: 1;
 }
 
 .projects h2{
@@ -115,6 +116,8 @@ div {
     border-radius: 12px;
     border-left:8px solid #F0B429 ;
     box-shadow:1px 4px 2px #e0e0e0;
+    background-color: white;
+
 }
 
 .projects .project-card h1{
@@ -127,18 +130,27 @@ div {
 }
 
 .right-side {
-    width: 90%;
+    width: 80%;
     justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
-.announcements h1,.trending h1 {
+.announcements{
+    display: grid;
+}
+
+.left h1, .announcements h1,.trending h1 {
     font-size: x-large;
+    padding: 8px;
+
 }
 
-.announcement-card {
+.announcement-card, .trending-card {
     border-radius: 8px;
     box-shadow:2px 2px 2px #6b6b6b;
     padding: 16px;
+    background-color: white;
 }
 
 .right-side .announcements .announcement {
@@ -146,3 +158,14 @@ div {
     box-shadow:0px 1px 0px #ababab;
     padding-bottom: 16px;
 }
+
+.right-side .trending {
+    margin-top: 32px;
+}
+
+.trending-card .project{
+    display: flex;
+    gap: 8px;
+    margin: 8px;
+}
+
